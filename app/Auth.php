@@ -24,9 +24,10 @@ switch ($action)
 		{
 			session_start();
 
-			$_SESSION['username'] = $response['user_name'];
-			$_SESSION['useralias'] = $response['user_alias'];
-			$_SESSION['userlevel'] = $response['user_level'];
+			$_SESSION['logged']		= TRUE;
+			$_SESSION['username'] 	= $response['user_name'];
+			$_SESSION['useralias'] 	= $response['user_alias'];
+			$_SESSION['userlevel'] 	= $response['user_level'];
 
 			header('location:?page=petugas');
 		}

@@ -2,6 +2,11 @@
 
 session_start();
 
+if ($_SESSION['logged'] !== TRUE) 
+{
+	header('location:?page=auth');
+}
+
 $action = $_GET['action'] ?? '';
 
 require_once 'lib/nusoap.php';
